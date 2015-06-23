@@ -1,0 +1,9 @@
+*.pyc
+*.o
+*~
+
+bin/
+model/
+output/
+data/
+pdnn/
