@@ -3,8 +3,11 @@
 *~
 *.swp
 *.gz
+*.tmp
+*.ark
 
 bin/
+tmp/
 model/
 output/
 data/
