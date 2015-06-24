@@ -15,8 +15,14 @@ echo "=============================================================="
 data=$(echo $1 | cut -f1 -d.)
 label=$2
 
-echo "working..."
+echo "Merging..."
 
-paste -d' ' $data.ark $label > $data\_merge.ark
+if [ ! -z "$label" -a "$label"!=" " ]; then
+        echo "Assume this is training data"
+        paste -d' ' $data.ark $label > $data\_merge.ark || exit 1
+else
+        echo "Assume this is testing data"
+        sed -e 's/$/ 0/' $data.ark > $data\_merge.ark || exit 1
+fi
 
-echo "Check file - $data\_merge.ark"
+echo "Done. Please check $data\_merge.ark"

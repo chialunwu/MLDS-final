@@ -1,9 +1,12 @@
 *.pyc
 *.o
 *~
+*.swp
+*.gz
 
 bin/
 model/
 output/
 data/
 pdnn/
+MLDS-Final/

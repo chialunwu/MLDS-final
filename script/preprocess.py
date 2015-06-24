@@ -38,6 +38,9 @@ def previous_subsequent(data, new_data, window_size):
 
 
 if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        print "param: $(data) $(new_data) $(window_size)"
+	sys.exit()
     data = sys.argv[1]
     new_data = sys.argv[2]
     window_size = int(sys.argv[3])
